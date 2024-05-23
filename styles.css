@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap");
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+header {
+  position: absolute;
+  z-index: 10;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+}
+h1 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+section {
+  background-color: var(--violet);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.content {
+  position: relative;
+  padding: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.content img {
+  width: 50%;
+  margin: 50px;
+  margin-top: 100px;
+}
+
+.content .text-content {
+  width: 50%;
+  height: 100vh;
+  margin: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.text-content p {
+  margin: 20px 0px;
+}
+
+button {
+  color: var(--violet);
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 150px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+button:active {
+  color: white;
+  background-color: var(--magenta);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.socials {
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.socials i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.fa-instagram {
+  font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 30px;
+    padding-bottom: 0px;
+  }
+  .background {
+    content: url(./images/bg-mobile.svg);
+    width: 100%;
+  }
+  .content img {
+    width: 100%;
+  }
+  .content .text-content {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .content .text-content h1 {
+    font-size: 36px;
+  }
+
+  button {
+    width: 220px;
+  }
+
+  .socials {
+    position: relative;
+    margin-top: 120px;
+  }
+}
